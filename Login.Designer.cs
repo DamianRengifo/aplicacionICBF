@@ -1,6 +1,6 @@
 ﻿namespace aplicacionICBF
 {
-    partial class Form1
+    partial class Login
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -39,7 +39,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(264, 138);
+            this.label1.Location = new System.Drawing.Point(58, 69);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(108, 24);
             this.label1.TabIndex = 5;
@@ -49,48 +49,49 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(452, 138);
+            this.label2.Location = new System.Drawing.Point(58, 122);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 24);
+            this.label2.Size = new System.Drawing.Size(57, 24);
             this.label2.TabIndex = 6;
-            this.label2.Text = "clave";
+            this.label2.Text = "Clave";
             // 
             // txtDocumento
             // 
-            this.txtDocumento.Location = new System.Drawing.Point(268, 177);
+            this.txtDocumento.Location = new System.Drawing.Point(185, 74);
             this.txtDocumento.Name = "txtDocumento";
             this.txtDocumento.Size = new System.Drawing.Size(100, 20);
             this.txtDocumento.TabIndex = 7;
             // 
             // txtClave
             // 
-            this.txtClave.Location = new System.Drawing.Point(436, 177);
+            this.txtClave.Location = new System.Drawing.Point(185, 127);
             this.txtClave.Name = "txtClave";
+            this.txtClave.PasswordChar = '?';
             this.txtClave.Size = new System.Drawing.Size(100, 20);
             this.txtClave.TabIndex = 8;
             // 
             // btnIngresar
             // 
             this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngresar.Location = new System.Drawing.Point(360, 258);
+            this.btnIngresar.Location = new System.Drawing.Point(119, 177);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(108, 54);
             this.btnIngresar.TabIndex = 9;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(349, 309);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.txtClave);
             this.Controls.Add(this.txtDocumento);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "Login";
+            this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();
 
