@@ -16,7 +16,7 @@ namespace aplicacionICBF
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new fomNiños());
+            Application.Run(new Login());
         }
     }
 }

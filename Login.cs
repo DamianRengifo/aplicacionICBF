@@ -16,5 +16,23 @@ namespace aplicacionICBF
         {
             InitializeComponent();
         }
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+            modelo.ORMDataContext bd = new modelo.ORMDataContext();
+            
+            var user = (from j in bd.login(txtDocumento.Text, txtClave.Text) select j).FirstOrDefault();
+            var rol = (from j in bd.obtenerRol(txtDocumento.Text, txtClave.Text) select j)
+                .FirstOrDefault();
+            var rolUser = rol.fk_idRol;
+            if (user != null)
+            {
+                
+                MessageBox.Show("Bienvenido " + user.nombre + " rol: " + rolUser.GetType());
+            }
+            else {
+                MessageBox.Show(".i.");
+            }
+        }
     }
 }

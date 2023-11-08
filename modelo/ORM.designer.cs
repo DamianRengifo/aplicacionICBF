@@ -72,7 +72,7 @@ namespace aplicacionICBF.modelo
     #endregion
 		
 		public ORMDataContext() : 
-				base(global::aplicacionICBF.Properties.Settings.Default.ICBFConnectionString, mappingSource)
+				base(global::aplicacionICBF.Properties.Settings.Default.ICBFConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
@@ -203,6 +203,20 @@ namespace aplicacionICBF.modelo
 			{
 				return this.GetTable<usuarios>();
 			}
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.login")]
+		public ISingleResult<loginResult> login([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(15)")] string documento, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(20)")] string contraseña)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), documento, contraseña);
+			return ((ISingleResult<loginResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.obtenerRol")]
+		public ISingleResult<obtenerRolResult> obtenerRol([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(15)")] string identificacion, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(20)")] string clave)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), identificacion, clave);
+			return ((ISingleResult<obtenerRolResult>)(result.ReturnValue));
 		}
 	}
 	
@@ -2893,6 +2907,220 @@ namespace aplicacionICBF.modelo
 			if ((this.PropertyChanged != null))
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	public partial class loginResult
+	{
+		
+		private int _idUsuario;
+		
+		private string _nombre;
+		
+		private string _numIdentificacion;
+		
+		private string _telefono;
+		
+		private string _celular;
+		
+		private string _direccion;
+		
+		private string _email;
+		
+		private int _fk_idRol;
+		
+		private System.DateTime _fechaNacimiento;
+		
+		private string _clave;
+		
+		public loginResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idUsuario", DbType="Int NOT NULL")]
+		public int idUsuario
+		{
+			get
+			{
+				return this._idUsuario;
+			}
+			set
+			{
+				if ((this._idUsuario != value))
+				{
+					this._idUsuario = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nombre", DbType="NVarChar(70) NOT NULL", CanBeNull=false)]
+		public string nombre
+		{
+			get
+			{
+				return this._nombre;
+			}
+			set
+			{
+				if ((this._nombre != value))
+				{
+					this._nombre = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_numIdentificacion", DbType="NVarChar(15) NOT NULL", CanBeNull=false)]
+		public string numIdentificacion
+		{
+			get
+			{
+				return this._numIdentificacion;
+			}
+			set
+			{
+				if ((this._numIdentificacion != value))
+				{
+					this._numIdentificacion = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_telefono", DbType="NVarChar(50)")]
+		public string telefono
+		{
+			get
+			{
+				return this._telefono;
+			}
+			set
+			{
+				if ((this._telefono != value))
+				{
+					this._telefono = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_celular", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string celular
+		{
+			get
+			{
+				return this._celular;
+			}
+			set
+			{
+				if ((this._celular != value))
+				{
+					this._celular = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_direccion", DbType="NVarChar(150) NOT NULL", CanBeNull=false)]
+		public string direccion
+		{
+			get
+			{
+				return this._direccion;
+			}
+			set
+			{
+				if ((this._direccion != value))
+				{
+					this._direccion = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_email", DbType="NVarChar(150)")]
+		public string email
+		{
+			get
+			{
+				return this._email;
+			}
+			set
+			{
+				if ((this._email != value))
+				{
+					this._email = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fk_idRol", DbType="Int NOT NULL")]
+		public int fk_idRol
+		{
+			get
+			{
+				return this._fk_idRol;
+			}
+			set
+			{
+				if ((this._fk_idRol != value))
+				{
+					this._fk_idRol = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fechaNacimiento", DbType="Date NOT NULL")]
+		public System.DateTime fechaNacimiento
+		{
+			get
+			{
+				return this._fechaNacimiento;
+			}
+			set
+			{
+				if ((this._fechaNacimiento != value))
+				{
+					this._fechaNacimiento = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_clave", DbType="NVarChar(20) NOT NULL", CanBeNull=false)]
+		public string clave
+		{
+			get
+			{
+				return this._clave;
+			}
+			set
+			{
+				if ((this._clave != value))
+				{
+					this._clave = value;
+				}
+			}
+		}
+	}
+	
+	public partial class obtenerRolResult
+	{
+		
+		private int _fk_idRol;
+		
+		public obtenerRolResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fk_idRol", DbType="Int NOT NULL")]
+		public int fk_idRol
+		{
+			get
+			{
+				return this._fk_idRol;
+			}
+			set
+			{
+				if ((this._fk_idRol != value))
+				{
+					this._fk_idRol = value;
+				}
 			}
 		}
 	}

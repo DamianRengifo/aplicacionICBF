@@ -66,7 +66,7 @@
             // 
             this.txtClave.Location = new System.Drawing.Point(185, 127);
             this.txtClave.Name = "txtClave";
-            this.txtClave.PasswordChar = '?';
+            this.txtClave.PasswordChar = '*';
             this.txtClave.Size = new System.Drawing.Size(100, 20);
             this.txtClave.TabIndex = 8;
             // 
@@ -79,6 +79,7 @@
             this.btnIngresar.TabIndex = 9;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.UseVisualStyleBackColor = true;
+            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
             // Login
             // 
@@ -91,6 +92,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();
