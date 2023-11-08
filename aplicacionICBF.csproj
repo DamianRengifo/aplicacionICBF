@@ -76,6 +76,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ORM.dbml</DependentUpon>
     </Compile>
+    <Compile Include="modelo\RegistroJardinDAO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
