@@ -1,4 +1,5 @@
-﻿using System;
+﻿using aplicacionICBF.modelo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,14 @@ namespace aplicacionICBF
 {
     public partial class fomNiños : Form
     {
+        
         public fomNiños()
         {
             InitializeComponent();
+            NiñosDAO niño = new NiñosDAO();
+            dgvNiños.DataSource = niño.consultarNiños();
         }
+
+        
     }
 }
