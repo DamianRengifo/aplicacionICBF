@@ -47,11 +47,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="fomNiños.cs">
+    <Compile Include="formNiños.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fomNiños.Designer.cs">
-      <DependentUpon>fomNiños.cs</DependentUpon>
+    <Compile Include="formNiños.Designer.cs">
+      <DependentUpon>formNiños.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PanelAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PanelAdmin.Designer.cs">
+      <DependentUpon>PanelAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -80,8 +86,14 @@
     <Compile Include="modelo\RegistroJardinDAO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="fomNiños.resx">
-      <DependentUpon>fomNiños.cs</DependentUpon>
+    <EmbeddedResource Include="formNiños.resx">
+      <DependentUpon>formNiños.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelAdmin.es-CO.resx">
+      <DependentUpon>PanelAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelAdmin.resx">
+      <DependentUpon>PanelAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

@@ -39,9 +39,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(58, 69);
+            this.label1.Location = new System.Drawing.Point(77, 85);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 24);
+            this.label1.Size = new System.Drawing.Size(136, 29);
             this.label1.TabIndex = 5;
             this.label1.Text = "Documento";
             // 
@@ -49,33 +50,37 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(58, 122);
+            this.label2.Location = new System.Drawing.Point(77, 150);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 24);
+            this.label2.Size = new System.Drawing.Size(74, 29);
             this.label2.TabIndex = 6;
             this.label2.Text = "Clave";
             // 
             // txtDocumento
             // 
-            this.txtDocumento.Location = new System.Drawing.Point(185, 74);
+            this.txtDocumento.Location = new System.Drawing.Point(247, 91);
+            this.txtDocumento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDocumento.Name = "txtDocumento";
-            this.txtDocumento.Size = new System.Drawing.Size(100, 20);
+            this.txtDocumento.Size = new System.Drawing.Size(132, 22);
             this.txtDocumento.TabIndex = 7;
             // 
             // txtClave
             // 
-            this.txtClave.Location = new System.Drawing.Point(185, 127);
+            this.txtClave.Location = new System.Drawing.Point(247, 156);
+            this.txtClave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtClave.Name = "txtClave";
             this.txtClave.PasswordChar = '*';
-            this.txtClave.Size = new System.Drawing.Size(100, 20);
+            this.txtClave.Size = new System.Drawing.Size(132, 22);
             this.txtClave.TabIndex = 8;
             // 
             // btnIngresar
             // 
             this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngresar.Location = new System.Drawing.Point(119, 177);
+            this.btnIngresar.Location = new System.Drawing.Point(159, 218);
+            this.btnIngresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(108, 54);
+            this.btnIngresar.Size = new System.Drawing.Size(144, 66);
             this.btnIngresar.TabIndex = 9;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.UseVisualStyleBackColor = true;
@@ -83,14 +88,15 @@
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(349, 309);
+            this.ClientSize = new System.Drawing.Size(465, 380);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.txtClave);
             this.Controls.Add(this.txtDocumento);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace aplicacionICBF
 {
-    public partial class fomNiños : Form
+    public partial class formNiños : Form
     {
         
-        public fomNiños()
+        public formNiños()
         {
             InitializeComponent();
             NiñosDAO niño = new NiñosDAO();

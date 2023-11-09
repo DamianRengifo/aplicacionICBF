@@ -27,8 +27,10 @@ namespace aplicacionICBF
             var rolUser = rol.fk_idRol;
             if (user != null)
             {
-                
-                MessageBox.Show("Bienvenido " + user.nombre + " rol: " + rolUser.GetType());
+                PanelAdmin panelAdmin = new PanelAdmin();
+                panelAdmin.Show();
+                this.Hide();
+                //MessageBox.Show("Bienvenido " + user.nombre + " rol: " + rolUser);
             }
             else {
                 MessageBox.Show(".i.");
