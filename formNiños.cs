@@ -24,8 +24,22 @@ namespace aplicacionICBF
         
 
         private void formNiños_Load(object sender, EventArgs e)
-        {
+        {   
+            RegistroJardinDAO registroJardinDAO = new RegistroJardinDAO();
+            cmbJardin.DataSource = registroJardinDAO.consultarTodos();
+            cmbJardin.ValueMember = "idJardin";
+            cmbJardin.DisplayMember = "nomJardin";
             lblnomUser.Text = ClsVariablesGlobales.nomUser.ToString();
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbJardin_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }

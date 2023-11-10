@@ -24,23 +24,25 @@ namespace aplicacionICBF
             var user = (from j in bd.login(txtDocumento.Text, txtClave.Text) select j).FirstOrDefault();
             if (user != null)
             {
-                if (user.fk_idRol == 1)
-                {
-                    ClsVariablesGlobales.idUser = user.idUsuario;
-                    ClsVariablesGlobales.fk_idRol = user.fk_idRol;
-                    ClsVariablesGlobales.nomUser = user.nombre;
-                    ClsVariablesGlobales.docUser = user.numIdentificacion;
-                    MessageBox.Show(ClsVariablesGlobales.nomUser);
-                    PanelAdmin panelAdmin = new PanelAdmin();
-                    panelAdmin.Show();
-                    this.Hide();
-                }
-                if (user.fk_idRol == 2) {
-                    MessageBox.Show("Bienvenida Madre Comunitaria" + user.nombre + " rol: " + user.fk_idRol);
-                }
+                switch (user.fk_idRol) {
+                    case 1:
+                        MessageBox.Show("Bienvenido Acudiente" + user.nombre + " rol: " + user.fk_idRol);
+                    break;
 
-                if (user.fk_idRol == 3) {
-                    MessageBox.Show("Bienvenido Administrador" + user.nombre + " rol: " + user.fk_idRol);
+                    case 2:
+                        MessageBox.Show("Bienvenida Madre Comunitaria" + user.nombre + " rol: " + user.fk_idRol);
+                    break;
+
+                    case 3:
+                        ClsVariablesGlobales.idUser = user.idUsuario;
+                        ClsVariablesGlobales.fk_idRol = user.fk_idRol;
+                        ClsVariablesGlobales.nomUser = user.nombre;
+                        ClsVariablesGlobales.docUser = user.numIdentificacion;
+                        MessageBox.Show(ClsVariablesGlobales.nomUser);
+                        PanelAdmin panelAdmin = new PanelAdmin();
+                        panelAdmin.Show();
+                        this.Hide();
+                    break;
                 }
             }
             
@@ -49,5 +51,6 @@ namespace aplicacionICBF
                 MessageBox.Show("Usuario o la contraseña esta incorrecta");
             }
         }
+
     }
 }

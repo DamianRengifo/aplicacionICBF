@@ -52,13 +52,14 @@
             this.label13 = new System.Windows.Forms.Label();
             this.cmbEps = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.txtAcudiente = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.cmbTipSangre = new System.Windows.Forms.ComboBox();
             this.cmbJardin = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
             this.btnRegistro = new System.Windows.Forms.Button();
             this.cmbCiudad = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNiños)).BeginInit();
             this.SuspendLayout();
             // 
@@ -292,14 +293,6 @@
             this.label14.TabIndex = 46;
             this.label14.Text = "Acudiente";
             // 
-            // txtAcudiente
-            // 
-            this.txtAcudiente.Enabled = false;
-            this.txtAcudiente.Location = new System.Drawing.Point(125, 442);
-            this.txtAcudiente.Name = "txtAcudiente";
-            this.txtAcudiente.Size = new System.Drawing.Size(166, 20);
-            this.txtAcudiente.TabIndex = 37;
-            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -326,6 +319,7 @@
             this.cmbJardin.Name = "cmbJardin";
             this.cmbJardin.Size = new System.Drawing.Size(166, 21);
             this.cmbJardin.TabIndex = 49;
+            this.cmbJardin.SelectedIndexChanged += new System.EventHandler(this.cmbJardin_SelectedIndexChanged);
             // 
             // label16
             // 
@@ -356,11 +350,33 @@
             this.cmbCiudad.Size = new System.Drawing.Size(166, 21);
             this.cmbCiudad.TabIndex = 32;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(125, 442);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(192, 21);
+            this.comboBox1.TabIndex = 50;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(576, 581);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(216, 48);
+            this.button1.TabIndex = 39;
+            this.button1.Text = "Registrar Acudiente";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // formNiños
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1028, 609);
+            this.ClientSize = new System.Drawing.Size(1094, 656);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.cmbJardin);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.cmbTipSangre);
@@ -379,10 +395,10 @@
             this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnBorrar);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnRegistro);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.dgvNiños);
-            this.Controls.Add(this.txtAcudiente);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.txtIdentificacion);
@@ -428,12 +444,13 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ComboBox cmbEps;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox txtAcudiente;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ComboBox cmbTipSangre;
         private System.Windows.Forms.ComboBox cmbJardin;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button btnRegistro;
         private System.Windows.Forms.ComboBox cmbCiudad;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -54,7 +54,7 @@
     <Compile Include="formNiños.Designer.cs">
       <DependentUpon>formNiños.cs</DependentUpon>
     </Compile>
-    <Compile Include="modelo\NiñosDao.cs" />
+    <Compile Include="modelo\NiñosDAO.cs" />
     <Compile Include="modelo\ORM.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -138,5 +138,6 @@
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

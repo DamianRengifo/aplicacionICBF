@@ -42,12 +42,12 @@ namespace aplicacionICBF.modelo
     partial void Insertniños(niños instance);
     partial void Updateniños(niños instance);
     partial void Deleteniños(niños instance);
-    partial void Insertnotas(notas instance);
-    partial void Updatenotas(notas instance);
-    partial void Deletenotas(notas instance);
     partial void Insertnivel(nivel instance);
     partial void Updatenivel(nivel instance);
     partial void Deletenivel(nivel instance);
+    partial void Insertnotas(notas instance);
+    partial void Updatenotas(notas instance);
+    partial void Deletenotas(notas instance);
     partial void Insertregistro_asistencia(registro_asistencia instance);
     partial void Updateregistro_asistencia(registro_asistencia instance);
     partial void Deleteregistro_asistencia(registro_asistencia instance);
@@ -72,7 +72,7 @@ namespace aplicacionICBF.modelo
     #endregion
 		
 		public ORMDataContext() : 
-				base(global::aplicacionICBF.Properties.Settings.Default.ICBFConnectionString2, mappingSource)
+				base(global::aplicacionICBF.Properties.Settings.Default.ICBFConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
@@ -133,19 +133,19 @@ namespace aplicacionICBF.modelo
 			}
 		}
 		
-		public System.Data.Linq.Table<notas> notas
-		{
-			get
-			{
-				return this.GetTable<notas>();
-			}
-		}
-		
 		public System.Data.Linq.Table<nivel> nivel
 		{
 			get
 			{
 				return this.GetTable<nivel>();
+			}
+		}
+		
+		public System.Data.Linq.Table<notas> notas
+		{
+			get
+			{
+				return this.GetTable<notas>();
 			}
 		}
 		
@@ -217,20 +217,6 @@ namespace aplicacionICBF.modelo
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), identificacion, clave);
 			return ((ISingleResult<obtenerRolResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.login")]
-		public ISingleResult<loginResult1> login1([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(15)")] string documento, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(20)")] string contraseña)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), documento, contraseña);
-			return ((ISingleResult<loginResult1>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.obtenerRol")]
-		public ISingleResult<obtenerRolResult1> obtenerRol1([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(15)")] string identificacion, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(20)")] string clave)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), identificacion, clave);
-			return ((ISingleResult<obtenerRolResult1>)(result.ReturnValue));
 		}
 	}
 	
@@ -1232,120 +1218,6 @@ namespace aplicacionICBF.modelo
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.notas")]
-	public partial class notas : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _idNotas;
-		
-		private string _nomNotas;
-		
-		private EntitySet<registro_avance_academico> _registro_avance_academico;
-		
-    #region Definiciones de métodos de extensibilidad
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnidNotasChanging(int value);
-    partial void OnidNotasChanged();
-    partial void OnnomNotasChanging(string value);
-    partial void OnnomNotasChanged();
-    #endregion
-		
-		public notas()
-		{
-			this._registro_avance_academico = new EntitySet<registro_avance_academico>(new Action<registro_avance_academico>(this.attach_registro_avance_academico), new Action<registro_avance_academico>(this.detach_registro_avance_academico));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idNotas", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int idNotas
-		{
-			get
-			{
-				return this._idNotas;
-			}
-			set
-			{
-				if ((this._idNotas != value))
-				{
-					this.OnidNotasChanging(value);
-					this.SendPropertyChanging();
-					this._idNotas = value;
-					this.SendPropertyChanged("idNotas");
-					this.OnidNotasChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nomNotas", DbType="NVarChar(15) NOT NULL", CanBeNull=false)]
-		public string nomNotas
-		{
-			get
-			{
-				return this._nomNotas;
-			}
-			set
-			{
-				if ((this._nomNotas != value))
-				{
-					this.OnnomNotasChanging(value);
-					this.SendPropertyChanging();
-					this._nomNotas = value;
-					this.SendPropertyChanged("nomNotas");
-					this.OnnomNotasChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="notas_registro_avance_academico", Storage="_registro_avance_academico", ThisKey="idNotas", OtherKey="fk_idNotas")]
-		public EntitySet<registro_avance_academico> registro_avance_academico
-		{
-			get
-			{
-				return this._registro_avance_academico;
-			}
-			set
-			{
-				this._registro_avance_academico.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_registro_avance_academico(registro_avance_academico entity)
-		{
-			this.SendPropertyChanging();
-			entity.notas = this;
-		}
-		
-		private void detach_registro_avance_academico(registro_avance_academico entity)
-		{
-			this.SendPropertyChanging();
-			entity.notas = null;
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.nivel")]
 	public partial class nivel : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -1457,6 +1329,120 @@ namespace aplicacionICBF.modelo
 		{
 			this.SendPropertyChanging();
 			entity.nivel = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.notas")]
+	public partial class notas : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _idNotas;
+		
+		private string _nomNotas;
+		
+		private EntitySet<registro_avance_academico> _registro_avance_academico;
+		
+    #region Definiciones de métodos de extensibilidad
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidNotasChanging(int value);
+    partial void OnidNotasChanged();
+    partial void OnnomNotasChanging(string value);
+    partial void OnnomNotasChanged();
+    #endregion
+		
+		public notas()
+		{
+			this._registro_avance_academico = new EntitySet<registro_avance_academico>(new Action<registro_avance_academico>(this.attach_registro_avance_academico), new Action<registro_avance_academico>(this.detach_registro_avance_academico));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idNotas", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int idNotas
+		{
+			get
+			{
+				return this._idNotas;
+			}
+			set
+			{
+				if ((this._idNotas != value))
+				{
+					this.OnidNotasChanging(value);
+					this.SendPropertyChanging();
+					this._idNotas = value;
+					this.SendPropertyChanged("idNotas");
+					this.OnidNotasChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nomNotas", DbType="NVarChar(15) NOT NULL", CanBeNull=false)]
+		public string nomNotas
+		{
+			get
+			{
+				return this._nomNotas;
+			}
+			set
+			{
+				if ((this._nomNotas != value))
+				{
+					this.OnnomNotasChanging(value);
+					this.SendPropertyChanging();
+					this._nomNotas = value;
+					this.SendPropertyChanged("nomNotas");
+					this.OnnomNotasChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="notas_registro_avance_academico", Storage="_registro_avance_academico", ThisKey="idNotas", OtherKey="fk_idNotas")]
+		public EntitySet<registro_avance_academico> registro_avance_academico
+		{
+			get
+			{
+				return this._registro_avance_academico;
+			}
+			set
+			{
+				this._registro_avance_academico.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_registro_avance_academico(registro_avance_academico entity)
+		{
+			this.SendPropertyChanging();
+			entity.notas = this;
+		}
+		
+		private void detach_registro_avance_academico(registro_avance_academico entity)
+		{
+			this.SendPropertyChanging();
+			entity.notas = null;
 		}
 	}
 	
@@ -3119,220 +3105,6 @@ namespace aplicacionICBF.modelo
 		private int _fk_idRol;
 		
 		public obtenerRolResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fk_idRol", DbType="Int NOT NULL")]
-		public int fk_idRol
-		{
-			get
-			{
-				return this._fk_idRol;
-			}
-			set
-			{
-				if ((this._fk_idRol != value))
-				{
-					this._fk_idRol = value;
-				}
-			}
-		}
-	}
-	
-	public partial class loginResult1
-	{
-		
-		private int _idUsuario;
-		
-		private string _nombre;
-		
-		private string _numIdentificacion;
-		
-		private string _telefono;
-		
-		private string _celular;
-		
-		private string _direccion;
-		
-		private string _email;
-		
-		private int _fk_idRol;
-		
-		private System.DateTime _fechaNacimiento;
-		
-		private string _clave;
-		
-		public loginResult1()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idUsuario", DbType="Int NOT NULL")]
-		public int idUsuario
-		{
-			get
-			{
-				return this._idUsuario;
-			}
-			set
-			{
-				if ((this._idUsuario != value))
-				{
-					this._idUsuario = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nombre", DbType="NVarChar(70) NOT NULL", CanBeNull=false)]
-		public string nombre
-		{
-			get
-			{
-				return this._nombre;
-			}
-			set
-			{
-				if ((this._nombre != value))
-				{
-					this._nombre = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_numIdentificacion", DbType="NVarChar(15) NOT NULL", CanBeNull=false)]
-		public string numIdentificacion
-		{
-			get
-			{
-				return this._numIdentificacion;
-			}
-			set
-			{
-				if ((this._numIdentificacion != value))
-				{
-					this._numIdentificacion = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_telefono", DbType="NVarChar(50)")]
-		public string telefono
-		{
-			get
-			{
-				return this._telefono;
-			}
-			set
-			{
-				if ((this._telefono != value))
-				{
-					this._telefono = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_celular", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string celular
-		{
-			get
-			{
-				return this._celular;
-			}
-			set
-			{
-				if ((this._celular != value))
-				{
-					this._celular = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_direccion", DbType="NVarChar(150) NOT NULL", CanBeNull=false)]
-		public string direccion
-		{
-			get
-			{
-				return this._direccion;
-			}
-			set
-			{
-				if ((this._direccion != value))
-				{
-					this._direccion = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_email", DbType="NVarChar(150)")]
-		public string email
-		{
-			get
-			{
-				return this._email;
-			}
-			set
-			{
-				if ((this._email != value))
-				{
-					this._email = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fk_idRol", DbType="Int NOT NULL")]
-		public int fk_idRol
-		{
-			get
-			{
-				return this._fk_idRol;
-			}
-			set
-			{
-				if ((this._fk_idRol != value))
-				{
-					this._fk_idRol = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fechaNacimiento", DbType="Date NOT NULL")]
-		public System.DateTime fechaNacimiento
-		{
-			get
-			{
-				return this._fechaNacimiento;
-			}
-			set
-			{
-				if ((this._fechaNacimiento != value))
-				{
-					this._fechaNacimiento = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_clave", DbType="NVarChar(20) NOT NULL", CanBeNull=false)]
-		public string clave
-		{
-			get
-			{
-				return this._clave;
-			}
-			set
-			{
-				if ((this._clave != value))
-				{
-					this._clave = value;
-				}
-			}
-		}
-	}
-	
-	public partial class obtenerRolResult1
-	{
-		
-		private int _fk_idRol;
-		
-		public obtenerRolResult1()
 		{
 		}
 		
