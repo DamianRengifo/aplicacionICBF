@@ -56,6 +56,7 @@
     </Compile>
     <Compile Include="modelo\CiudadDAO.cs" />
     <Compile Include="modelo\EpsDAO.cs" />
+    <Compile Include="modelo\EstadosDAO.cs" />
     <Compile Include="modelo\NiñosDAO.cs" />
     <Compile Include="modelo\ORM.designer.cs">
       <AutoGen>True</AutoGen>
