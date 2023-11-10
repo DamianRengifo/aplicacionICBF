@@ -54,5 +54,15 @@ namespace aplicacionICBF.Properties {
                 return ((string)(this["ICBFConnectionString2"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=BOGAPRCSFFSD111;Initial Catalog=ICBF;Integrated Security=True")]
+        public string ICBFConnectionString3 {
+            get {
+                return ((string)(this["ICBFConnectionString3"]));
+            }
+        }
     }
 }
