@@ -40,7 +40,6 @@
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.txtIdentificacion = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.cmbDireccion = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -58,8 +57,9 @@
             this.label16 = new System.Windows.Forms.Label();
             this.btnRegistro = new System.Windows.Forms.Button();
             this.cmbCiudad = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.cmbAcudiente = new System.Windows.Forms.ComboBox();
+            this.btnAcudiente = new System.Windows.Forms.Button();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNiños)).BeginInit();
             this.SuspendLayout();
             // 
@@ -177,14 +177,6 @@
             this.txtNombre.Size = new System.Drawing.Size(166, 20);
             this.txtNombre.TabIndex = 33;
             // 
-            // cmbDireccion
-            // 
-            this.cmbDireccion.FormattingEnabled = true;
-            this.cmbDireccion.Location = new System.Drawing.Point(125, 241);
-            this.cmbDireccion.Name = "cmbDireccion";
-            this.cmbDireccion.Size = new System.Drawing.Size(166, 21);
-            this.cmbDireccion.TabIndex = 32;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -277,6 +269,7 @@
             // 
             // cmbEps
             // 
+            this.cmbEps.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEps.FormattingEnabled = true;
             this.cmbEps.Location = new System.Drawing.Point(125, 357);
             this.cmbEps.Name = "cmbEps";
@@ -305,7 +298,7 @@
             // 
             // cmbTipSangre
             // 
-            this.cmbTipSangre.Enabled = false;
+            this.cmbTipSangre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipSangre.FormattingEnabled = true;
             this.cmbTipSangre.Location = new System.Drawing.Point(151, 400);
             this.cmbTipSangre.Name = "cmbTipSangre";
@@ -314,6 +307,7 @@
             // 
             // cmbJardin
             // 
+            this.cmbJardin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbJardin.FormattingEnabled = true;
             this.cmbJardin.Location = new System.Drawing.Point(125, 488);
             this.cmbJardin.Name = "cmbJardin";
@@ -341,42 +335,52 @@
             this.btnRegistro.TabIndex = 39;
             this.btnRegistro.Text = "Registrar";
             this.btnRegistro.UseVisualStyleBackColor = false;
+            this.btnRegistro.Click += new System.EventHandler(this.btnRegistro_Click);
             // 
             // cmbCiudad
             // 
+            this.cmbCiudad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCiudad.FormattingEnabled = true;
             this.cmbCiudad.Location = new System.Drawing.Point(125, 299);
             this.cmbCiudad.Name = "cmbCiudad";
             this.cmbCiudad.Size = new System.Drawing.Size(166, 21);
             this.cmbCiudad.TabIndex = 32;
             // 
-            // comboBox1
+            // cmbAcudiente
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(125, 442);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(192, 21);
-            this.comboBox1.TabIndex = 50;
+            this.cmbAcudiente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbAcudiente.FormattingEnabled = true;
+            this.cmbAcudiente.Location = new System.Drawing.Point(125, 442);
+            this.cmbAcudiente.Name = "cmbAcudiente";
+            this.cmbAcudiente.Size = new System.Drawing.Size(192, 21);
+            this.cmbAcudiente.TabIndex = 50;
             // 
-            // button1
+            // btnAcudiente
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(576, 581);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(216, 48);
-            this.button1.TabIndex = 39;
-            this.button1.Text = "Registrar Acudiente";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnAcudiente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnAcudiente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAcudiente.Location = new System.Drawing.Point(576, 581);
+            this.btnAcudiente.Name = "btnAcudiente";
+            this.btnAcudiente.Size = new System.Drawing.Size(216, 48);
+            this.btnAcudiente.TabIndex = 39;
+            this.btnAcudiente.Text = "Registrar Acudiente";
+            this.btnAcudiente.UseVisualStyleBackColor = false;
+            this.btnAcudiente.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // txtDireccion
+            // 
+            this.txtDireccion.Location = new System.Drawing.Point(125, 236);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(166, 20);
+            this.txtDireccion.TabIndex = 51;
             // 
             // formNiños
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1094, 656);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.txtDireccion);
+            this.Controls.Add(this.cmbAcudiente);
             this.Controls.Add(this.cmbJardin);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.cmbTipSangre);
@@ -395,7 +399,7 @@
             this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnBorrar);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAcudiente);
             this.Controls.Add(this.btnRegistro);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.dgvNiños);
@@ -404,7 +408,6 @@
             this.Controls.Add(this.txtIdentificacion);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.cmbCiudad);
-            this.Controls.Add(this.cmbDireccion);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -432,7 +435,6 @@
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.TextBox txtIdentificacion;
         private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.ComboBox cmbDireccion;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -450,7 +452,8 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button btnRegistro;
         private System.Windows.Forms.ComboBox cmbCiudad;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox cmbAcudiente;
+        private System.Windows.Forms.Button btnAcudiente;
+        private System.Windows.Forms.TextBox txtDireccion;
     }
 }

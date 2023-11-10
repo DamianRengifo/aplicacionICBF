@@ -54,6 +54,8 @@
     <Compile Include="formNiños.Designer.cs">
       <DependentUpon>formNiños.cs</DependentUpon>
     </Compile>
+    <Compile Include="modelo\CiudadDAO.cs" />
+    <Compile Include="modelo\EpsDAO.cs" />
     <Compile Include="modelo\NiñosDAO.cs" />
     <Compile Include="modelo\ORM.designer.cs">
       <AutoGen>True</AutoGen>
@@ -61,6 +63,8 @@
       <DependentUpon>ORM.dbml</DependentUpon>
     </Compile>
     <Compile Include="modelo\RegistroJardinDAO.cs" />
+    <Compile Include="modelo\TipoSangreDAO.cs" />
+    <Compile Include="modelo\UsuarioDAO.cs" />
     <Compile Include="PanelAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
