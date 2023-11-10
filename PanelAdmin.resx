@@ -136,18 +136,21 @@
   <data name="madreComunitariaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>116, 35</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="&gt;&gt;jardinToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="madreComunitariaToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 13.8pt</value>
   </data>
-  <data name="consultarNiñosToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 28</value>
+  <data name="&gt;&gt;lblnomUser.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterScreen</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
-    <value>menuStrip1</value>
+  <data name="lblnomUser.Location" type="System.Drawing.Point, System.Drawing">
+    <value>300, 168</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Panel de administración</value>
@@ -158,11 +161,17 @@
   <data name="niñosToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>87, 35</value>
   </data>
-  <data name="consultarNiñosToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 10.2pt</value>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>PanelAdmin</value>
   </data>
   <data name="&gt;&gt;madreComunitariaToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;madreComunitariaToolStripMenuItem.Name" xml:space="preserve">
+    <value>madreComunitariaToolStripMenuItem</value>
+  </data>
+  <data name="madreComunitariaToolStripMenuItem.Text" xml:space="preserve">
+    <value>Usuarios</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
@@ -171,8 +180,8 @@
   <data name="&gt;&gt;niñosToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;niñosToolStripMenuItem.Name" xml:space="preserve">
-    <value>niñosToolStripMenuItem</value>
+  <data name="consultarNiñosToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10.2pt</value>
   </data>
   <data name="&gt;&gt;contextMenuStrip1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -204,7 +213,7 @@
   <data name="niñosToolStripMenuItem.Text" xml:space="preserve">
     <value>Niños</value>
   </data>
-  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lblnomUser.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;consultarNiñosToolStripMenuItem.Name" xml:space="preserve">
@@ -214,7 +223,7 @@
     <value>324, 39</value>
   </data>
   <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="consultarUsuariosToolStripMenuItem.Text" xml:space="preserve">
     <value>Consultar usuarios</value>
@@ -228,14 +237,20 @@
   <data name="&gt;&gt;contextMenuStrip1.Name" xml:space="preserve">
     <value>contextMenuStrip1</value>
   </data>
-  <data name="&gt;&gt;jardinToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
   </data>
   <data name="&gt;&gt;consultarNiñosToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;madreComunitariaToolStripMenuItem.Name" xml:space="preserve">
-    <value>madreComunitariaToolStripMenuItem</value>
+  <data name="&gt;&gt;niñosToolStripMenuItem.Name" xml:space="preserve">
+    <value>niñosToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="jardinToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>111, 35</value>
@@ -243,8 +258,11 @@
   <data name="menuStrip1.Text" xml:space="preserve">
     <value>Opciones</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>PanelAdmin</value>
+  <data name="&gt;&gt;lblnomUser.Name" xml:space="preserve">
+    <value>lblnomUser</value>
+  </data>
+  <data name="consultarNiñosToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 28</value>
   </data>
   <data name="consultarJardinesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>235, 28</value>
@@ -252,20 +270,23 @@
   <data name="consultarJardinesToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 10.2pt</value>
   </data>
+  <data name="lblnomUser.TabIndex" type="System.Int32, mscorlib">
+    <value>46</value>
+  </data>
   <data name="consultarJardinesToolStripMenuItem.Text" xml:space="preserve">
     <value>Consultar jardines</value>
   </data>
-  <data name="consultarUsuariosToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>239, 28</value>
+  <data name="&gt;&gt;lblnomUser.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;consultarJardinesToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="madreComunitariaToolStripMenuItem.Text" xml:space="preserve">
-    <value>Usuarios</value>
+  <data name="consultarUsuariosToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>239, 28</value>
   </data>
-  <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
+  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>202, 17</value>
   </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -273,7 +294,7 @@
   <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>es-CO</value>
   </metadata>
-  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>202, 17</value>
+  <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
   </metadata>
 </root>

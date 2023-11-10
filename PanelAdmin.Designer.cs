@@ -123,5 +123,6 @@
         private System.Windows.Forms.ToolStripMenuItem consultarUsuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarJardinesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarNiñosToolStripMenuItem;
+        private System.Windows.Forms.Label lblnomUser;
     }
 }

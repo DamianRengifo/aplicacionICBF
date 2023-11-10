@@ -47,12 +47,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClsVariablesGlobales.cs" />
     <Compile Include="formNiños.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="formNiños.Designer.cs">
       <DependentUpon>formNiños.cs</DependentUpon>
     </Compile>
+    <Compile Include="modelo\NiñosDao.cs" />
+    <Compile Include="modelo\ORM.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ORM.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="modelo\RegistroJardin.cs" />
     <Compile Include="PanelAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,13 +85,6 @@
     <Compile Include="MadreComunitaria.Designer.cs">
       <DependentUpon>MadreComunitaria.cs</DependentUpon>
     </Compile>
-    <Compile Include="modelo\NiñosDAO.cs" />
-    <Compile Include="modelo\ORM.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ORM.dbml</DependentUpon>
-    </Compile>
-    <Compile Include="modelo\RegistroJardinDAO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="formNiños.resx">

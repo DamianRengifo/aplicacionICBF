@@ -34,5 +34,6 @@ namespace aplicacionICBF
             formNiños formNiños = new formNiños();
             formNiños.ShowDialog();
         }
+
     }
 }

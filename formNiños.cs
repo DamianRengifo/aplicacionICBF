@@ -22,5 +22,11 @@ namespace aplicacionICBF
         }
 
         
+
+        private void formNiños_Load(object sender, EventArgs e)
+        {
+            lblnomUser.Text = ClsVariablesGlobales.nomUser.ToString();
+
+        }
     }
 }
