@@ -54,6 +54,7 @@
     <Compile Include="formNiños.Designer.cs">
       <DependentUpon>formNiños.cs</DependentUpon>
     </Compile>
+    <Compile Include="modelo\EstadosDAO.cs" />
     <Compile Include="modelo\NiñosDao.cs" />
     <Compile Include="modelo\ORM.designer.cs">
       <AutoGen>True</AutoGen>

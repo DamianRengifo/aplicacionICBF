@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace aplicacionICBF.modelo
 {
-    internal class RegistroJardinDAO
+    public class RegistroJardinDAO
     {
         ORMDataContext bd = new ORMDataContext();
 
