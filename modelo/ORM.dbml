@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ICBF" Class="ORMDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=CHECHOPC\SQLEXPRESS;Initial Catalog=ICBF;Integrated Security=True" SettingsObjectName="aplicacionICBF.Properties.Settings" SettingsPropertyName="ICBFConnectionString2" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-DVTF0L7\SQLEXPRESS;Initial Catalog=ICBF;Integrated Security=True" SettingsObjectName="aplicacionICBF.Properties.Settings" SettingsPropertyName="ICBFConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.ciudad_nacimiento" Member="ciudad_nacimiento">
     <Type Name="ciudad_nacimiento">
       <Column Name="idCiudad" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -152,29 +152,6 @@
     <Parameter Name="identificacion" Type="System.String" DbType="NVarChar(15)" />
     <Parameter Name="clave" Type="System.String" DbType="NVarChar(20)" />
     <ElementType Name="obtenerRolResult">
-      <Column Name="fk_idRol" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.login" Method="login1">
-    <Parameter Name="documento" Type="System.String" DbType="NVarChar(15)" />
-    <Parameter Name="contraseña" Type="System.String" DbType="VarChar(20)" />
-    <ElementType Name="loginResult1">
-      <Column Name="idUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="nombre" Type="System.String" DbType="NVarChar(70) NOT NULL" CanBeNull="false" />
-      <Column Name="numIdentificacion" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
-      <Column Name="telefono" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="celular" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="direccion" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
-      <Column Name="email" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
-      <Column Name="fk_idRol" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="fechaNacimiento" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
-      <Column Name="clave" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.obtenerRol" Method="obtenerRol1">
-    <Parameter Name="identificacion" Type="System.String" DbType="NVarChar(15)" />
-    <Parameter Name="clave" Type="System.String" DbType="NVarChar(20)" />
-    <ElementType Name="obtenerRolResult1">
       <Column Name="fk_idRol" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>

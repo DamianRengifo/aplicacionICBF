@@ -14,6 +14,24 @@ namespace aplicacionICBF.modelo
             return (from j in bd.niños select j).ToList();
         }
 
+        public Object consultarDatos()
+        {
+            return (from j in bd.niños 
+                    select new { 
+                idNiño = j.idNiño,
+                nombre = j.nombre,
+                numIdentificacion = j.numIdentificacion,
+                telefonoNiño = j.telefonoNiño,
+                direccionNiño= j.direccionNiño,
+                fk_idCiudad = j.ciudad_nacimiento.nomCiudad,
+                fk_idEps = j.eps.nomEps,
+                fk_idTipSangre = j.tipo_sangre.nomTipoSangre,
+                fk_idAcudiente = j.usuarios.nombre,
+                fk_idJardin = j.registro_jardin.nomJardin,
+                fechaNac = j.fechaNac
+            }).ToList();
+        }
+
         public void registrarNiños(niños niño)
         {
             bd.niños.InsertOnSubmit(niño);
@@ -26,12 +44,13 @@ namespace aplicacionICBF.modelo
             niñoEdit.numIdentificacion = niño.numIdentificacion;
             niñoEdit.telefonoNiño = niño.telefonoNiño;
             niñoEdit.direccionNiño = niño.direccionNiño;
-            niñoEdit.ciudad_nacimiento = niño.ciudad_nacimiento;
+            niñoEdit.fk_idCiudad = niño.fk_idCiudad;
             niñoEdit.fk_idEps = niño.fk_idEps;
             niñoEdit.fk_idTipSangre = niño.fk_idTipSangre;
             niñoEdit.fk_idAcudiente = niño.fk_idAcudiente;
             niñoEdit.fk_idJardin = niño.fk_idJardin;
             niñoEdit.fechaNac = niño.fechaNac;
+            bd.SubmitChanges();
         }
 
         public void eliminarNiño(int idNiño) {

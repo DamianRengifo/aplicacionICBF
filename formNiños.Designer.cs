@@ -36,6 +36,18 @@
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.dgvNiños = new System.Windows.Forms.DataGridView();
+            this.Seleccione = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numIdentificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ciudad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Eps = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoSangre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.acudiente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jardin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecNacimientoGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label4 = new System.Windows.Forms.Label();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.txtIdentificacion = new System.Windows.Forms.TextBox();
@@ -60,6 +72,7 @@
             this.cmbAcudiente = new System.Windows.Forms.ComboBox();
             this.btnAcudiente = new System.Windows.Forms.Button();
             this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.txtIdNiño = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNiños)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,6 +101,7 @@
             // 
             this.fecNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.fecNacimiento.Location = new System.Drawing.Point(206, 533);
+            this.fecNacimiento.MinDate = new System.DateTime(2005, 1, 1, 0, 0, 0, 0);
             this.fecNacimiento.Name = "fecNacimiento";
             this.fecNacimiento.Size = new System.Drawing.Size(93, 20);
             this.fecNacimiento.TabIndex = 43;
@@ -120,6 +134,7 @@
             this.btnBorrar.TabIndex = 40;
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.UseVisualStyleBackColor = false;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // btnActualizar
             // 
@@ -131,16 +146,113 @@
             this.btnActualizar.TabIndex = 39;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // dgvNiños
             // 
             this.dgvNiños.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.dgvNiños.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvNiños.Location = new System.Drawing.Point(381, 67);
+            this.dgvNiños.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Seleccione,
+            this.id,
+            this.Nombre,
+            this.numIdentificacion,
+            this.Telefono,
+            this.Direccion,
+            this.Ciudad,
+            this.Eps,
+            this.tipoSangre,
+            this.acudiente,
+            this.jardin,
+            this.fecNacimientoGrid});
+            this.dgvNiños.Location = new System.Drawing.Point(350, 67);
             this.dgvNiños.Name = "dgvNiños";
             this.dgvNiños.RowHeadersWidth = 51;
-            this.dgvNiños.Size = new System.Drawing.Size(646, 486);
+            this.dgvNiños.Size = new System.Drawing.Size(987, 486);
             this.dgvNiños.TabIndex = 38;
+            this.dgvNiños.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNiños_CellContentClick);
+            // 
+            // Seleccione
+            // 
+            this.Seleccione.DataPropertyName = "(ninguno)";
+            this.Seleccione.HeaderText = "Seleccionar";
+            this.Seleccione.Name = "Seleccione";
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "idNiño";
+            this.id.HeaderText = "Codigo del Niño";
+            this.id.Name = "id";
+            // 
+            // Nombre
+            // 
+            this.Nombre.DataPropertyName = "nombre";
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Nombre.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // numIdentificacion
+            // 
+            this.numIdentificacion.DataPropertyName = "numidentificacion";
+            this.numIdentificacion.HeaderText = "Numero de Identificacion";
+            this.numIdentificacion.Name = "numIdentificacion";
+            this.numIdentificacion.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.numIdentificacion.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Telefono
+            // 
+            this.Telefono.DataPropertyName = "telefonoNiño";
+            this.Telefono.HeaderText = "Telefono";
+            this.Telefono.Name = "Telefono";
+            this.Telefono.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Telefono.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Direccion
+            // 
+            this.Direccion.DataPropertyName = "direccionNiño";
+            this.Direccion.HeaderText = "Direccion";
+            this.Direccion.Name = "Direccion";
+            this.Direccion.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Direccion.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Ciudad
+            // 
+            this.Ciudad.DataPropertyName = "fk_idCiudad";
+            this.Ciudad.HeaderText = "Ciudad de nacimiento";
+            this.Ciudad.Name = "Ciudad";
+            this.Ciudad.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Ciudad.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Eps
+            // 
+            this.Eps.DataPropertyName = "fk_idEps";
+            this.Eps.HeaderText = "EPS";
+            this.Eps.Name = "Eps";
+            // 
+            // tipoSangre
+            // 
+            this.tipoSangre.DataPropertyName = "fk_idTipSangre";
+            this.tipoSangre.HeaderText = "Tipo de Sangre";
+            this.tipoSangre.Name = "tipoSangre";
+            // 
+            // acudiente
+            // 
+            this.acudiente.DataPropertyName = "fk_idAcudiente";
+            this.acudiente.HeaderText = "Acudiente";
+            this.acudiente.Name = "acudiente";
+            // 
+            // jardin
+            // 
+            this.jardin.DataPropertyName = "fk_idJardin";
+            this.jardin.HeaderText = "Jardin";
+            this.jardin.Name = "jardin";
+            // 
+            // fecNacimientoGrid
+            // 
+            this.fecNacimientoGrid.DataPropertyName = "fechaNac";
+            this.fecNacimientoGrid.HeaderText = "Fecha de nacimiento";
+            this.fecNacimientoGrid.Name = "fecNacimientoGrid";
             // 
             // label4
             // 
@@ -374,11 +486,21 @@
             this.txtDireccion.Size = new System.Drawing.Size(166, 20);
             this.txtDireccion.TabIndex = 51;
             // 
+            // txtIdNiño
+            // 
+            this.txtIdNiño.AutoSize = true;
+            this.txtIdNiño.Location = new System.Drawing.Point(371, 26);
+            this.txtIdNiño.Name = "txtIdNiño";
+            this.txtIdNiño.Size = new System.Drawing.Size(35, 13);
+            this.txtIdNiño.TabIndex = 52;
+            this.txtIdNiño.Text = "label7";
+            // 
             // formNiños
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1094, 656);
+            this.ClientSize = new System.Drawing.Size(1370, 656);
+            this.Controls.Add(this.txtIdNiño);
             this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.cmbAcudiente);
             this.Controls.Add(this.cmbJardin);
@@ -455,5 +577,18 @@
         private System.Windows.Forms.ComboBox cmbAcudiente;
         private System.Windows.Forms.Button btnAcudiente;
         private System.Windows.Forms.TextBox txtDireccion;
+        private System.Windows.Forms.DataGridViewButtonColumn Seleccione;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numIdentificacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ciudad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Eps;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipoSangre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn acudiente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn jardin;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fecNacimientoGrid;
+        private System.Windows.Forms.Label txtIdNiño;
     }
 }
