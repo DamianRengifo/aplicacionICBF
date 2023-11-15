@@ -68,6 +68,7 @@ namespace aplicacionICBF
             dgvJardines.DataSource = registrojardinDAO.consultarTodos();
             tbNombre.Text = "";
             tbDireccion.Text = "";
+            txtId.Text = "";
         }
 
         private void btnBorrar_Click(object sender, EventArgs e)
@@ -77,6 +78,8 @@ namespace aplicacionICBF
 
             registrojardinDAO.eliminar(idJardin);
             dgvJardines.DataSource = registrojardinDAO.consultarTodos();
+            tbNombre.Text = "";
+            tbDireccion.Text = "";
         }
     }
 }
