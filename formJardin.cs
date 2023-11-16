@@ -16,6 +16,7 @@ namespace aplicacionICBF
         public formJardin()
         {
             InitializeComponent();
+            
         }
 
         private void formJardin_Load(object sender, EventArgs e)
@@ -26,6 +27,8 @@ namespace aplicacionICBF
             cmbEstado.DataSource = estadosDAO.consultarTodos();
             cmbEstado.ValueMember = "idEstado";
             cmbEstado.DisplayMember = "nomEstado";
+            btnActualizar.Enabled = false;
+            btnBorrar.Enabled = false;
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -50,7 +53,10 @@ namespace aplicacionICBF
             txtId.Text = dgvJardines.Rows[index].Cells[1].Value.ToString();
             tbNombre.Text = dgvJardines.Rows[index].Cells[2].Value.ToString();
             tbDireccion.Text = dgvJardines.Rows[index].Cells[3].Value.ToString();
-            cmbEstado.SelectedValue = dgvJardines.Rows[index].Cells[4].ToString();
+            cmbEstado.SelectedValue = (dgvJardines.Rows[index].Cells[4].ToString());
+            btnRegistrar.Enabled = false;
+            btnActualizar.Enabled = true;
+            btnBorrar.Enabled = true;
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
@@ -69,6 +75,9 @@ namespace aplicacionICBF
             tbNombre.Text = "";
             tbDireccion.Text = "";
             txtId.Text = "";
+            btnActualizar.Enabled = false;
+            btnBorrar.Enabled = false;
+            btnRegistrar.Enabled = true;
         }
 
         private void btnBorrar_Click(object sender, EventArgs e)
@@ -80,6 +89,10 @@ namespace aplicacionICBF
             dgvJardines.DataSource = registrojardinDAO.consultarTodos();
             tbNombre.Text = "";
             tbDireccion.Text = "";
+            txtId.Text = "";
+            btnActualizar.Enabled = false;
+            btnBorrar.Enabled = false;
+            btnRegistrar.Enabled = true;
         }
     }
 }
