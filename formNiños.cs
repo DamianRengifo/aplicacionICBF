@@ -17,8 +17,8 @@ namespace aplicacionICBF
         {
             InitializeComponent();
             NiñosDAO niño = new NiñosDAO();
-            var datos = niño.consultarDatos();
-            dgvNiños.DataSource = niño.consultarNiños();
+            // var datos = niño.consultarDatos();
+            dgvNiños.DataSource = niño.consultarDatos();
         }
 
         private void formNiños_Load(object sender, EventArgs e)
@@ -107,7 +107,7 @@ namespace aplicacionICBF
             niños.fk_idCiudad = int.Parse(cmbCiudad.SelectedValue.ToString());
             ciudad.nomCiudad = cmbCiudad.Text;
             niñosDao.registrarNiños(niños);
-            dgvNiños.DataSource = niñosDao.consultarNiños();
+            dgvNiños.DataSource = niñosDao.consultarDatos();
             reiniciarVariables();
         }
 
@@ -184,7 +184,7 @@ namespace aplicacionICBF
             niños.fk_idCiudad = int.Parse(cmbCiudad.SelectedValue.ToString());
             ciudad.nomCiudad = cmbCiudad.Text;
             niñosDao.editarNiño(niños);
-            dgvNiños.DataSource = niñosDao.consultarNiños();
+            dgvNiños.DataSource = niñosDao.consultarDatos();
             reiniciarVariables();
         }
 
@@ -193,7 +193,7 @@ namespace aplicacionICBF
             modelo.NiñosDAO niñosDao = new modelo.NiñosDAO();
             int idNiño = int.Parse(txtIdNiño.Text);
             niñosDao.eliminarNiño(idNiño);
-            dgvNiños.DataSource = niñosDao.consultarNiños();
+            dgvNiños.DataSource = niñosDao.consultarDatos();
             reiniciarVariables();
         }
     }
