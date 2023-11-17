@@ -38,7 +38,14 @@ namespace aplicacionICBF.modelo
 
         public Object consultarTodos()
         {
-            return (from j in bd.registro_jardin select j).ToList();
+            return (from j in bd.registro_jardin 
+                    select new
+                        {
+                            idJardin = j.idJardin,
+                            nomJardin = j.nomJardin,
+                            direccionJardin = j.direccionJardin,
+                            estado = j.estados.nomEstado
+                        });
         }
     }
 }
