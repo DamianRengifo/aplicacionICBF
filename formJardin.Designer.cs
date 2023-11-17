@@ -38,15 +38,15 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.dgvJardines = new System.Windows.Forms.DataGridView();
-            this.btnActualizar = new System.Windows.Forms.Button();
-            this.btnBorrar = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Seleccione = new System.Windows.Forms.DataGridViewButtonColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.btnBorrar = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvJardines)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -140,11 +140,11 @@
             // txtId
             // 
             this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId.Location = new System.Drawing.Point(940, 274);
+            this.txtId.Location = new System.Drawing.Point(908, 274);
             this.txtId.Margin = new System.Windows.Forms.Padding(4);
             this.txtId.Name = "txtId";
             this.txtId.ReadOnly = true;
-            this.txtId.Size = new System.Drawing.Size(58, 34);
+            this.txtId.Size = new System.Drawing.Size(112, 34);
             this.txtId.TabIndex = 8;
             // 
             // dgvJardines
@@ -163,6 +163,46 @@
             this.dgvJardines.Size = new System.Drawing.Size(911, 283);
             this.dgvJardines.TabIndex = 9;
             this.dgvJardines.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvJardines_CellContentClick);
+            // 
+            // Seleccione
+            // 
+            this.Seleccione.DataPropertyName = "fk_idEstado.nomEstado";
+            this.Seleccione.HeaderText = "Seleccione";
+            this.Seleccione.MinimumWidth = 6;
+            this.Seleccione.Name = "Seleccione";
+            this.Seleccione.Width = 125;
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "idJardin";
+            this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            this.ID.Width = 125;
+            // 
+            // Nombre
+            // 
+            this.Nombre.DataPropertyName = "nomJardin";
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.MinimumWidth = 6;
+            this.Nombre.Name = "Nombre";
+            this.Nombre.Width = 125;
+            // 
+            // Direccion
+            // 
+            this.Direccion.DataPropertyName = "direccionJardin";
+            this.Direccion.HeaderText = "Direccion";
+            this.Direccion.MinimumWidth = 6;
+            this.Direccion.Name = "Direccion";
+            this.Direccion.Width = 125;
+            // 
+            // Estado
+            // 
+            this.Estado.DataPropertyName = "estado";
+            this.Estado.HeaderText = "Estado";
+            this.Estado.MinimumWidth = 6;
+            this.Estado.Name = "Estado";
+            this.Estado.Width = 125;
             // 
             // btnActualizar
             // 
@@ -211,46 +251,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
-            // 
-            // Seleccione
-            // 
-            this.Seleccione.DataPropertyName = "fk_idEstado.nomEstado";
-            this.Seleccione.HeaderText = "Seleccione";
-            this.Seleccione.MinimumWidth = 6;
-            this.Seleccione.Name = "Seleccione";
-            this.Seleccione.Width = 125;
-            // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "idJardin";
-            this.ID.HeaderText = "ID";
-            this.ID.MinimumWidth = 6;
-            this.ID.Name = "ID";
-            this.ID.Width = 125;
-            // 
-            // Nombre
-            // 
-            this.Nombre.DataPropertyName = "nomJardin";
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.MinimumWidth = 6;
-            this.Nombre.Name = "Nombre";
-            this.Nombre.Width = 125;
-            // 
-            // Direccion
-            // 
-            this.Direccion.DataPropertyName = "direccionJardin";
-            this.Direccion.HeaderText = "Direccion";
-            this.Direccion.MinimumWidth = 6;
-            this.Direccion.Name = "Direccion";
-            this.Direccion.Width = 125;
-            // 
-            // Estado
-            // 
-            this.Estado.DataPropertyName = "estado";
-            this.Estado.HeaderText = "Estado";
-            this.Estado.MinimumWidth = 6;
-            this.Estado.Name = "Estado";
-            this.Estado.Width = 125;
             // 
             // formJardin
             // 

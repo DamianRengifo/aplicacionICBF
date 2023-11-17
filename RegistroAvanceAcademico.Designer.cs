@@ -52,19 +52,23 @@
             // idRegAsistencia
             // 
             this.idRegAsistencia.AutoSize = true;
-            this.idRegAsistencia.Location = new System.Drawing.Point(631, 28);
+            this.idRegAsistencia.Location = new System.Drawing.Point(841, 34);
+            this.idRegAsistencia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.idRegAsistencia.Name = "idRegAsistencia";
-            this.idRegAsistencia.Size = new System.Drawing.Size(35, 13);
+            this.idRegAsistencia.Size = new System.Drawing.Size(44, 16);
             this.idRegAsistencia.TabIndex = 21;
             this.idRegAsistencia.Text = "label4";
             this.idRegAsistencia.Visible = false;
             // 
             // btnActualizar
             // 
-            this.btnActualizar.BackColor = System.Drawing.Color.Gold;
-            this.btnActualizar.Location = new System.Drawing.Point(549, 207);
+            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnActualizar.Location = new System.Drawing.Point(732, 255);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(117, 46);
+            this.btnActualizar.Size = new System.Drawing.Size(156, 57);
             this.btnActualizar.TabIndex = 18;
             this.btnActualizar.Text = "Editar Asistencia";
             this.btnActualizar.UseVisualStyleBackColor = false;
@@ -72,10 +76,13 @@
             // 
             // btnRegistrar
             // 
-            this.btnRegistrar.BackColor = System.Drawing.Color.LightGreen;
-            this.btnRegistrar.Location = new System.Drawing.Point(193, 207);
+            this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnRegistrar.Location = new System.Drawing.Point(257, 255);
+            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(117, 46);
+            this.btnRegistrar.Size = new System.Drawing.Size(156, 57);
             this.btnRegistrar.TabIndex = 20;
             this.btnRegistrar.Text = "Registrar Asistencia";
             this.btnRegistrar.UseVisualStyleBackColor = false;
@@ -84,18 +91,20 @@
             // cmbNiño
             // 
             this.cmbNiño.FormattingEnabled = true;
-            this.cmbNiño.Location = new System.Drawing.Point(81, 54);
+            this.cmbNiño.Location = new System.Drawing.Point(108, 66);
+            this.cmbNiño.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbNiño.Name = "cmbNiño";
-            this.cmbNiño.Size = new System.Drawing.Size(121, 21);
+            this.cmbNiño.Size = new System.Drawing.Size(160, 24);
             this.cmbNiño.TabIndex = 16;
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Checked = false;
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(405, 58);
+            this.dateTimePicker1.Location = new System.Drawing.Point(540, 71);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(83, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(109, 22);
             this.dateTimePicker1.TabIndex = 15;
             // 
             // txtMadreCom
@@ -103,9 +112,10 @@
             this.txtMadreCom.AutoSize = true;
             this.txtMadreCom.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMadreCom.ForeColor = System.Drawing.Color.GreenYellow;
-            this.txtMadreCom.Location = new System.Drawing.Point(338, 12);
+            this.txtMadreCom.Location = new System.Drawing.Point(451, 15);
+            this.txtMadreCom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtMadreCom.Name = "txtMadreCom";
-            this.txtMadreCom.Size = new System.Drawing.Size(71, 30);
+            this.txtMadreCom.Size = new System.Drawing.Size(91, 37);
             this.txtMadreCom.TabIndex = 14;
             this.txtMadreCom.Text = "label2";
             // 
@@ -113,9 +123,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(9, 95);
+            this.label4.Location = new System.Drawing.Point(12, 117);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(99, 19);
+            this.label4.Size = new System.Drawing.Size(124, 24);
             this.label4.TabIndex = 10;
             this.label4.Text = "Descripcion:  ";
             // 
@@ -123,9 +134,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(24, 55);
+            this.label2.Location = new System.Drawing.Point(32, 68);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 19);
+            this.label2.Size = new System.Drawing.Size(61, 24);
             this.label2.TabIndex = 12;
             this.label2.Text = "Niño: ";
             // 
@@ -133,9 +145,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(215, 57);
+            this.label1.Location = new System.Drawing.Point(287, 70);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(187, 19);
+            this.label1.Size = new System.Drawing.Size(237, 24);
             this.label1.TabIndex = 13;
             this.label1.Text = "Fecha de Entrega de Notas";
             // 
@@ -144,31 +157,37 @@
             this.dgvAsistencia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAsistencia.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Seleccionar});
-            this.dgvAsistencia.Location = new System.Drawing.Point(28, 273);
+            this.dgvAsistencia.Location = new System.Drawing.Point(37, 336);
+            this.dgvAsistencia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvAsistencia.Name = "dgvAsistencia";
-            this.dgvAsistencia.Size = new System.Drawing.Size(748, 165);
+            this.dgvAsistencia.RowHeadersWidth = 51;
+            this.dgvAsistencia.Size = new System.Drawing.Size(997, 203);
             this.dgvAsistencia.TabIndex = 9;
             this.dgvAsistencia.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAsistencia_CellContentClick);
             // 
             // Seleccionar
             // 
             this.Seleccionar.HeaderText = "Seleccionar";
+            this.Seleccionar.MinimumWidth = 6;
             this.Seleccionar.Name = "Seleccionar";
+            this.Seleccionar.Width = 125;
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(114, 95);
+            this.txtDescripcion.Location = new System.Drawing.Point(152, 117);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(330, 106);
+            this.txtDescripcion.Size = new System.Drawing.Size(439, 130);
             this.txtDescripcion.TabIndex = 22;
             this.txtDescripcion.Text = "";
             // 
             // txtAñoEscolar
             // 
-            this.txtAñoEscolar.Location = new System.Drawing.Point(634, 57);
+            this.txtAñoEscolar.Location = new System.Drawing.Point(845, 70);
+            this.txtAñoEscolar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtAñoEscolar.Mask = "9999";
             this.txtAñoEscolar.Name = "txtAñoEscolar";
-            this.txtAñoEscolar.Size = new System.Drawing.Size(100, 20);
+            this.txtAñoEscolar.Size = new System.Drawing.Size(132, 22);
             this.txtAñoEscolar.TabIndex = 23;
             this.txtAñoEscolar.ValidatingType = typeof(int);
             // 
@@ -176,9 +195,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(533, 59);
+            this.label3.Location = new System.Drawing.Point(711, 73);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 19);
+            this.label3.Size = new System.Drawing.Size(120, 24);
             this.label3.TabIndex = 12;
             this.label3.Text = "Año Escolar: ";
             // 
@@ -186,43 +206,48 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(507, 97);
+            this.label5.Location = new System.Drawing.Point(676, 119);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 19);
+            this.label5.Size = new System.Drawing.Size(70, 24);
             this.label5.TabIndex = 12;
             this.label5.Text = "Notas: ";
             // 
             // cmbNotas
             // 
             this.cmbNotas.FormattingEnabled = true;
-            this.cmbNotas.Location = new System.Drawing.Point(564, 96);
+            this.cmbNotas.Location = new System.Drawing.Point(752, 118);
+            this.cmbNotas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbNotas.Name = "cmbNotas";
-            this.cmbNotas.Size = new System.Drawing.Size(121, 21);
+            this.cmbNotas.Size = new System.Drawing.Size(160, 24);
             this.cmbNotas.TabIndex = 16;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(507, 136);
+            this.label6.Location = new System.Drawing.Point(676, 167);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 19);
+            this.label6.Size = new System.Drawing.Size(64, 24);
             this.label6.TabIndex = 12;
             this.label6.Text = "Nivel: ";
             // 
             // cmbNivel
             // 
             this.cmbNivel.FormattingEnabled = true;
-            this.cmbNivel.Location = new System.Drawing.Point(564, 135);
+            this.cmbNivel.Location = new System.Drawing.Point(752, 166);
+            this.cmbNivel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbNivel.Name = "cmbNivel";
-            this.cmbNivel.Size = new System.Drawing.Size(121, 21);
+            this.cmbNivel.Size = new System.Drawing.Size(160, 24);
             this.cmbNivel.TabIndex = 16;
             // 
             // RegistroAvanceAcademico
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(216)))), ((int)(((byte)(131)))));
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.txtAñoEscolar);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.idRegAsistencia);
@@ -240,6 +265,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvAsistencia);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "RegistroAvanceAcademico";
             this.Text = "RegistroAvanceAcademico";
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsistencia)).EndInit();
