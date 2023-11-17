@@ -63,15 +63,16 @@
     <Compile Include="modelo\CiudadDAO.cs" />
     <Compile Include="modelo\EpsDAO.cs" />
     <Compile Include="modelo\EstadosDAO.cs" />
+    <Compile Include="modelo\Nivel.cs" />
     <Compile Include="modelo\NiñosDAO.cs" />
-    <Compile Include="modelo\ORM.cs">
-      <DependentUpon>ORM.dbml</DependentUpon>
-    </Compile>
+    <Compile Include="modelo\Notas.cs" />
     <Compile Include="modelo\ORM.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ORM.dbml</DependentUpon>
     </Compile>
+    <Compile Include="modelo\RegistroAsistenciaDAO.cs" />
+    <Compile Include="modelo\RegistroAvanceAcademico.cs" />
     <Compile Include="modelo\RegistroJardinDAO.cs" />
     <Compile Include="modelo\TipoSangreDAO.cs" />
     <Compile Include="modelo\UsuarioDAO.cs" />
@@ -99,8 +100,26 @@
     <Compile Include="MadreComunitaria.Designer.cs">
       <DependentUpon>MadreComunitaria.cs</DependentUpon>
     </Compile>
+    <Compile Include="PanelMadre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PanelMadre.Designer.cs">
+      <DependentUpon>PanelMadre.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistroAsistencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroAsistencia.Designer.cs">
+      <DependentUpon>RegistroAsistencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroAvanceAcademico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroAvanceAcademico.Designer.cs">
+      <DependentUpon>RegistroAvanceAcademico.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormAcudiente.resx">
       <DependentUpon>FormAcudiente.cs</DependentUpon>
     </EmbeddedResource>
@@ -122,6 +141,9 @@
     <EmbeddedResource Include="MadreComunitaria.resx">
       <DependentUpon>MadreComunitaria.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PanelMadre.resx">
+      <DependentUpon>PanelMadre.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -132,6 +154,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RegistroAsistencia.resx">
+      <DependentUpon>RegistroAsistencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroAvanceAcademico.resx">
+      <DependentUpon>RegistroAvanceAcademico.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="modelo\ORM.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>ORM.designer.cs</LastGenOutput>

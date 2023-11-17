@@ -30,7 +30,14 @@ namespace aplicacionICBF
                     break;
 
                     case 2:
+                        ClsVariablesGlobales.idUser = user.idUsuario;
+                        ClsVariablesGlobales.fk_idRol = user.fk_idRol;
+                        ClsVariablesGlobales.nomUser = user.nombre;
+                        ClsVariablesGlobales.docUser = user.numIdentificacion;
                         MessageBox.Show("Bienvenida Madre Comunitaria" + user.nombre + " rol: " + user.fk_idRol);
+                        PanelMadre panelMadre = new PanelMadre();
+                        panelMadre.Show();
+                        this.Hide();
                     break;
 
                     case 3:

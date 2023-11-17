@@ -3,19 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 namespace aplicacionICBF.modelo
 {
-    public class EstadosDAO
+    internal class Nivel
     {
         ORMDataContext bd = new ORMDataContext();
         public Object consultarTodos()
         {
-            return from e in bd.estados where e.fk_idTiposEstados == 1 select e;
-        }
-
-        public Object consultarEstadosNiños()
-        {
-            return from e in bd.estados where e.fk_idTiposEstados == 2 select e;
+            return (from j in bd.nivel select j).ToList();
         }
     }
 }

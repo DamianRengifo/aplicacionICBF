@@ -46,5 +46,10 @@ namespace aplicacionICBF
             FormAcudiente frmAcudiente = new FormAcudiente();
             frmAcudiente.ShowDialog();
         }
+
+        private void madresComunitariasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

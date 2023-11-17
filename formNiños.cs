@@ -59,7 +59,7 @@ namespace aplicacionICBF
         {
             UsuarioDAO usuarioDAO = new UsuarioDAO();
             cmbAcudiente.DataSource = usuarioDAO.consultarAcudiente();
-            cmbAcudiente.ValueMember = "idUsuario";
+            cmbAcudiente.ValueMember = "Codigo";
             cmbAcudiente.DisplayMember = "nombre";
         }
 
@@ -73,7 +73,8 @@ namespace aplicacionICBF
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            FormAcudiente frmAcudiente = new FormAcudiente();
+            frmAcudiente.ShowDialog();
         }
 
         private void cmbJardin_SelectedIndexChanged(object sender, EventArgs e)

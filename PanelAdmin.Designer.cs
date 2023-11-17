@@ -108,6 +108,7 @@
             this.madresComunitariasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.consultarMadresComunitariasToolStripMenuItem});
             this.madresComunitariasToolStripMenuItem.Name = "madresComunitariasToolStripMenuItem";
+            this.madresComunitariasToolStripMenuItem.Click += new System.EventHandler(this.madresComunitariasToolStripMenuItem_Click);
             // 
             // consultarMadresComunitariasToolStripMenuItem
             // 

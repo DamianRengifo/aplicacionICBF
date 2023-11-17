@@ -72,7 +72,7 @@ namespace aplicacionICBF.modelo
     #endregion
 		
 		public ORMDataContext() : 
-				base(global::aplicacionICBF.Properties.Settings.Default.ICBFConnectionString, mappingSource)
+				base(global::aplicacionICBF.Properties.Settings.Default.ICBFConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
@@ -1466,6 +1466,8 @@ namespace aplicacionICBF.modelo
 		
 		private EntityRef<niños> _niños;
 		
+		private EntityRef<usuarios> _usuarios;
+		
     #region Definiciones de métodos de extensibilidad
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -1486,6 +1488,7 @@ namespace aplicacionICBF.modelo
 		{
 			this._estados = default(EntityRef<estados>);
 			this._niños = default(EntityRef<niños>);
+			this._usuarios = default(EntityRef<usuarios>);
 			OnCreated();
 		}
 		
@@ -1588,6 +1591,10 @@ namespace aplicacionICBF.modelo
 			{
 				if ((this._fk_idMadCom != value))
 				{
+					if (this._usuarios.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
 					this.Onfk_idMadComChanging(value);
 					this.SendPropertyChanging();
 					this._fk_idMadCom = value;
@@ -1661,6 +1668,40 @@ namespace aplicacionICBF.modelo
 						this._fk_idNiño = default(int);
 					}
 					this.SendPropertyChanged("niños");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="usuarios_registro_asistencia", Storage="_usuarios", ThisKey="fk_idMadCom", OtherKey="idUsuario", IsForeignKey=true)]
+		public usuarios usuarios
+		{
+			get
+			{
+				return this._usuarios.Entity;
+			}
+			set
+			{
+				usuarios previousValue = this._usuarios.Entity;
+				if (((previousValue != value) 
+							|| (this._usuarios.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._usuarios.Entity = null;
+						previousValue.registro_asistencia.Remove(this);
+					}
+					this._usuarios.Entity = value;
+					if ((value != null))
+					{
+						value.registro_asistencia.Add(this);
+						this._fk_idMadCom = value.idUsuario;
+					}
+					else
+					{
+						this._fk_idMadCom = default(int);
+					}
+					this.SendPropertyChanged("usuarios");
 				}
 			}
 		}
@@ -2588,6 +2629,8 @@ namespace aplicacionICBF.modelo
 		
 		private EntitySet<niños> _niños;
 		
+		private EntitySet<registro_asistencia> _registro_asistencia;
+		
 		private EntityRef<roles> _roles;
 		
     #region Definiciones de métodos de extensibilidad
@@ -2619,6 +2662,7 @@ namespace aplicacionICBF.modelo
 		public usuarios()
 		{
 			this._niños = new EntitySet<niños>(new Action<niños>(this.attach_niños), new Action<niños>(this.detach_niños));
+			this._registro_asistencia = new EntitySet<registro_asistencia>(new Action<registro_asistencia>(this.attach_registro_asistencia), new Action<registro_asistencia>(this.detach_registro_asistencia));
 			this._roles = default(EntityRef<roles>);
 			OnCreated();
 		}
@@ -2840,6 +2884,19 @@ namespace aplicacionICBF.modelo
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="usuarios_registro_asistencia", Storage="_registro_asistencia", ThisKey="idUsuario", OtherKey="fk_idMadCom")]
+		public EntitySet<registro_asistencia> registro_asistencia
+		{
+			get
+			{
+				return this._registro_asistencia;
+			}
+			set
+			{
+				this._registro_asistencia.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="roles_usuarios", Storage="_roles", ThisKey="fk_idRol", OtherKey="idRol", IsForeignKey=true)]
 		public roles roles
 		{
@@ -2901,6 +2958,18 @@ namespace aplicacionICBF.modelo
 		}
 		
 		private void detach_niños(niños entity)
+		{
+			this.SendPropertyChanging();
+			entity.usuarios = null;
+		}
+		
+		private void attach_registro_asistencia(registro_asistencia entity)
+		{
+			this.SendPropertyChanging();
+			entity.usuarios = this;
+		}
+		
+		private void detach_registro_asistencia(registro_asistencia entity)
 		{
 			this.SendPropertyChanging();
 			entity.usuarios = null;
