@@ -48,6 +48,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClsVariablesGlobales.cs" />
+    <Compile Include="FormAcudiente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAcudiente.Designer.cs">
+      <DependentUpon>FormAcudiente.cs</DependentUpon>
+    </Compile>
     <Compile Include="formNiños.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +64,9 @@
     <Compile Include="modelo\EpsDAO.cs" />
     <Compile Include="modelo\EstadosDAO.cs" />
     <Compile Include="modelo\NiñosDAO.cs" />
+    <Compile Include="modelo\ORM.cs">
+      <DependentUpon>ORM.dbml</DependentUpon>
+    </Compile>
     <Compile Include="modelo\ORM.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -92,6 +101,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAcudiente.resx">
+      <DependentUpon>FormAcudiente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formNiños.resx">
       <DependentUpon>formNiños.cs</DependentUpon>
     </EmbeddedResource>

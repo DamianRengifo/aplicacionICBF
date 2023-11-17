@@ -43,7 +43,7 @@
       <Association Name="eps_niños" Member="eps" ThisKey="fk_idEps" OtherKey="idEps" Type="eps" IsForeignKey="true" />
       <Association Name="registro_jardin_niños" Member="registro_jardin" ThisKey="fk_idJardin" OtherKey="idJardin" Type="registro_jardin" IsForeignKey="true" />
       <Association Name="tipo_sangre_niños" Member="tipo_sangre" ThisKey="fk_idTipSangre" OtherKey="idTipoSangre" Type="tipo_sangre" IsForeignKey="true" />
-      <Association Name="usuarios_niños" Member="usuarios" ThisKey="idNiño" OtherKey="idUsuario" Type="usuarios" IsForeignKey="true" />
+      <Association Name="usuarios_niños" Member="usuarios" ThisKey="fk_idAcudiente" OtherKey="idUsuario" Type="usuarios" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.nivel" Member="nivel">
@@ -128,7 +128,7 @@
       <Column Name="fk_idRol" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="fechaNacimiento" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
       <Column Name="clave" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
-      <Association Name="usuarios_niños" Member="niños" ThisKey="idUsuario" OtherKey="idNiño" Type="niños" Cardinality="One" />
+      <Association Name="usuarios_niños" Member="niños" ThisKey="idUsuario" OtherKey="fk_idAcudiente" Type="niños" />
       <Association Name="roles_usuarios" Member="roles" ThisKey="fk_idRol" OtherKey="idRol" Type="roles" IsForeignKey="true" />
     </Type>
   </Table>

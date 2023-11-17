@@ -494,6 +494,7 @@
             this.txtIdNiño.Size = new System.Drawing.Size(35, 13);
             this.txtIdNiño.TabIndex = 52;
             this.txtIdNiño.Text = "label7";
+            this.txtIdNiño.Visible = false;
             // 
             // formNiños
             // 

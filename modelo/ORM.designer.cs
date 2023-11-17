@@ -748,10 +748,6 @@ namespace aplicacionICBF.modelo
 			{
 				if ((this._idNiño != value))
 				{
-					if (this._usuarios.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
 					this.OnidNiñoChanging(value);
 					this.SendPropertyChanging();
 					this._idNiño = value;
@@ -924,6 +920,10 @@ namespace aplicacionICBF.modelo
 			{
 				if ((this._fk_idAcudiente != value))
 				{
+					if (this._usuarios.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
 					this.Onfk_idAcudienteChanging(value);
 					this.SendPropertyChanging();
 					this._fk_idAcudiente = value;
@@ -1139,7 +1139,7 @@ namespace aplicacionICBF.modelo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="usuarios_niños", Storage="_usuarios", ThisKey="idNiño", OtherKey="idUsuario", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="usuarios_niños", Storage="_usuarios", ThisKey="fk_idAcudiente", OtherKey="idUsuario", IsForeignKey=true)]
 		public usuarios usuarios
 		{
 			get
@@ -1156,17 +1156,17 @@ namespace aplicacionICBF.modelo
 					if ((previousValue != null))
 					{
 						this._usuarios.Entity = null;
-						previousValue.niños = null;
+						previousValue.niños.Remove(this);
 					}
 					this._usuarios.Entity = value;
 					if ((value != null))
 					{
-						value.niños = this;
-						this._idNiño = value.idUsuario;
+						value.niños.Add(this);
+						this._fk_idAcudiente = value.idUsuario;
 					}
 					else
 					{
-						this._idNiño = default(int);
+						this._fk_idAcudiente = default(int);
 					}
 					this.SendPropertyChanged("usuarios");
 				}
@@ -2586,7 +2586,7 @@ namespace aplicacionICBF.modelo
 		
 		private string _clave;
 		
-		private EntityRef<niños> _niños;
+		private EntitySet<niños> _niños;
 		
 		private EntityRef<roles> _roles;
 		
@@ -2618,7 +2618,7 @@ namespace aplicacionICBF.modelo
 		
 		public usuarios()
 		{
-			this._niños = default(EntityRef<niños>);
+			this._niños = new EntitySet<niños>(new Action<niños>(this.attach_niños), new Action<niños>(this.detach_niños));
 			this._roles = default(EntityRef<roles>);
 			OnCreated();
 		}
@@ -2827,32 +2827,16 @@ namespace aplicacionICBF.modelo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="usuarios_niños", Storage="_niños", ThisKey="idUsuario", OtherKey="idNiño", IsUnique=true, IsForeignKey=false)]
-		public niños niños
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="usuarios_niños", Storage="_niños", ThisKey="idUsuario", OtherKey="fk_idAcudiente")]
+		public EntitySet<niños> niños
 		{
 			get
 			{
-				return this._niños.Entity;
+				return this._niños;
 			}
 			set
 			{
-				niños previousValue = this._niños.Entity;
-				if (((previousValue != value) 
-							|| (this._niños.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._niños.Entity = null;
-						previousValue.usuarios = null;
-					}
-					this._niños.Entity = value;
-					if ((value != null))
-					{
-						value.usuarios = this;
-					}
-					this.SendPropertyChanged("niños");
-				}
+				this._niños.Assign(value);
 			}
 		}
 		
@@ -2908,6 +2892,18 @@ namespace aplicacionICBF.modelo
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+		
+		private void attach_niños(niños entity)
+		{
+			this.SendPropertyChanging();
+			entity.usuarios = this;
+		}
+		
+		private void detach_niños(niños entity)
+		{
+			this.SendPropertyChanging();
+			entity.usuarios = null;
 		}
 	}
 	

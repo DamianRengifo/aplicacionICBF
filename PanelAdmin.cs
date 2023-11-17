@@ -35,5 +35,16 @@ namespace aplicacionICBF
             formNiños.ShowDialog();
         }
 
+        private void consultarMadresComunitariasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MadreComunitaria formMadres = new MadreComunitaria();
+            formMadres.ShowDialog();
+        }
+
+        private void consultarAcudientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAcudiente frmAcudiente = new FormAcudiente();
+            frmAcudiente.ShowDialog();
+        }
     }
 }

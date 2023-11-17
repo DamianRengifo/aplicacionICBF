@@ -38,7 +38,7 @@ namespace aplicacionICBF
                         ClsVariablesGlobales.fk_idRol = user.fk_idRol;
                         ClsVariablesGlobales.nomUser = user.nombre;
                         ClsVariablesGlobales.docUser = user.numIdentificacion;
-                        MessageBox.Show(ClsVariablesGlobales.nomUser);
+                        MessageBox.Show("Bienvenido " + ClsVariablesGlobales.nomUser + ":)");
                         PanelAdmin panelAdmin = new PanelAdmin();
                         panelAdmin.Show();
                         this.Hide();

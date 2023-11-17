@@ -38,6 +38,10 @@
             this.consultarJardinesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.niñosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarNiñosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.madresComunitariasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarMadresComunitariasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.acudientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarAcudientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,7 +58,9 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.madreComunitariaToolStripMenuItem,
             this.jardinToolStripMenuItem,
-            this.niñosToolStripMenuItem});
+            this.niñosToolStripMenuItem,
+            this.madresComunitariasToolStripMenuItem,
+            this.acudientesToolStripMenuItem});
             this.menuStrip1.Name = "menuStrip1";
             // 
             // madreComunitariaToolStripMenuItem
@@ -96,6 +102,32 @@
             this.consultarNiñosToolStripMenuItem.Name = "consultarNiñosToolStripMenuItem";
             this.consultarNiñosToolStripMenuItem.Click += new System.EventHandler(this.consultarNiñosToolStripMenuItem_Click);
             // 
+            // madresComunitariasToolStripMenuItem
+            // 
+            resources.ApplyResources(this.madresComunitariasToolStripMenuItem, "madresComunitariasToolStripMenuItem");
+            this.madresComunitariasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.consultarMadresComunitariasToolStripMenuItem});
+            this.madresComunitariasToolStripMenuItem.Name = "madresComunitariasToolStripMenuItem";
+            // 
+            // consultarMadresComunitariasToolStripMenuItem
+            // 
+            resources.ApplyResources(this.consultarMadresComunitariasToolStripMenuItem, "consultarMadresComunitariasToolStripMenuItem");
+            this.consultarMadresComunitariasToolStripMenuItem.Name = "consultarMadresComunitariasToolStripMenuItem";
+            this.consultarMadresComunitariasToolStripMenuItem.Click += new System.EventHandler(this.consultarMadresComunitariasToolStripMenuItem_Click);
+            // 
+            // acudientesToolStripMenuItem
+            // 
+            resources.ApplyResources(this.acudientesToolStripMenuItem, "acudientesToolStripMenuItem");
+            this.acudientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.consultarAcudientesToolStripMenuItem});
+            this.acudientesToolStripMenuItem.Name = "acudientesToolStripMenuItem";
+            // 
+            // consultarAcudientesToolStripMenuItem
+            // 
+            resources.ApplyResources(this.consultarAcudientesToolStripMenuItem, "consultarAcudientesToolStripMenuItem");
+            this.consultarAcudientesToolStripMenuItem.Name = "consultarAcudientesToolStripMenuItem";
+            this.consultarAcudientesToolStripMenuItem.Click += new System.EventHandler(this.consultarAcudientesToolStripMenuItem_Click);
+            // 
             // PanelAdmin
             // 
             resources.ApplyResources(this, "$this");
@@ -124,5 +156,9 @@
         private System.Windows.Forms.ToolStripMenuItem consultarJardinesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarNiñosToolStripMenuItem;
         private System.Windows.Forms.Label lblnomUser;
+        private System.Windows.Forms.ToolStripMenuItem madresComunitariasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem acudientesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultarMadresComunitariasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultarAcudientesToolStripMenuItem;
     }
 }
